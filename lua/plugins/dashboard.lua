@@ -1,0 +1,40 @@
+return {
+	"nvimdev/dashboard-nvim",
+	event = "VimEnter",
+	config = function()
+		require("dashboard").setup({
+			shuffle_letter = true,
+			hide = {
+				statusline = true,
+				tabline = false,
+				winbar = true,
+			},
+			config = {
+				header = {
+					"                                                       ",
+					"  1 0 1 $ % ^ & * ( ) _ + = [ ] { } | \\ / < > ~ # @ ! ",
+					"  & * % 0 1 0 1 # @ $ ^ & * ( ) _ + = [ ] { } | \\ / < ",
+					"  ^ & * ( m 1 0 1 - $ % ^ ^ * ( 0 1 + = [ ] 0 } | \\ / ",
+					"  ! @ # $ % ^ & * ( ) _ + = [ ] { } | \\ / < > ~ 0 1 0 ",
+					"  ! @ # $ % a y * ( ) a b = - ] u } @ %* / < > ~ 0 1 0 ",
+					"  ^ & * ( ) 1 0 1| \\ / < >  ( ) 1 0 1| }0 1  1 |/ ~ # >",
+					"  < > ~ 1 & 1 0 $ ( ^ & * ( ) _ + = [ ] { } | \\ / < > ",
+					"  * ( ) _ + = 0 1 0 1 # @ $ % ^ & * ( ) _ + = [ ] { } ",
+					"                                                       ",
+				},
+
+				packages = { enable = true }, -- show how many plugins neovim loaded
+				project = {
+					enable = true,
+					limit = 8,
+					icon = "LATEST",
+					label = "",
+					action = "Telescope find_files cwd=",
+				},
+				mru = { enable = true, limit = 10, icon = "PROJECTS", label = "", cwd_only = false },
+				footer = {}, -- footer
+			},
+		})
+	end,
+	dependencies = { { "nvim-tree/nvim-web-devicons" } },
+}
