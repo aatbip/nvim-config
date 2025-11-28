@@ -3,6 +3,7 @@ return {
 	event = "VimEnter",
 	config = function()
 		require("dashboard").setup({
+			vim.opt.shortmess:append("I"),
 			shuffle_letter = true,
 			hide = {
 				statusline = true,
@@ -10,6 +11,7 @@ return {
 				winbar = true,
 			},
 			config = {
+				shortcut = {},
 				header = {
 					"                                                       ",
 					"  1 0 1 $ % ^ & * ( ) _ + = [ ] { } | \\ / < > ~ # @ ! ",
@@ -22,7 +24,6 @@ return {
 					"  * ( ) _ + = 0 1 0 1 # @ $ % ^ & * ( ) _ + = [ ] { } ",
 					"                                                       ",
 				},
-
 				packages = { enable = true }, -- show how many plugins neovim loaded
 				project = {
 					enable = true,
@@ -32,7 +33,7 @@ return {
 					action = "Telescope find_files cwd=",
 				},
 				mru = { enable = true, limit = 10, icon = "PROJECTS", label = "", cwd_only = false },
-				footer = {}, -- footer
+				footer = { "aatbip 2025" },
 			},
 		})
 	end,
