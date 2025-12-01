@@ -93,6 +93,11 @@ return {
 
 					LineNr = { fg = colors.surface2 }, -- normal line numbers
 					CursorLineNr = { fg = colors.mauve, bold = true }, -- current line number colored & bold
+
+					FloatBorder = { fg = "#1f1f1f", bg = "#1f1f1f" }, -- border of float windows
+					NormalFloat = { bg = "#2a2a2a" }, -- background of float windows
+					HoverBorder = { fg = "#2a2a2a", bg = "#1f1f1f" }, -- for lsp hover specifically
+					HoverNormal = { bg = "#1f1f1f" }, -- for lsp hover specifically
 				}
 			end,
 			default_integrations = true,
