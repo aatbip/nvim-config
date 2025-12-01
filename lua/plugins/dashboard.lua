@@ -28,11 +28,11 @@ return {
 				project = {
 					enable = true,
 					limit = 8,
-					icon = "LATEST",
+					icon = "PROJECTS",
 					label = "",
 					action = "Telescope find_files cwd=",
 				},
-				mru = { enable = true, limit = 10, icon = "PROJECTS", label = "", cwd_only = false },
+				mru = { enable = true, limit = 10, icon = "LATESTS", label = "", cwd_only = false },
 				footer = { "aatbip 2025" },
 			},
 		})
