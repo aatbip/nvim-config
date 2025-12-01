@@ -27,12 +27,18 @@ return {
 				packages = { enable = true }, -- show how many plugins neovim loaded
 				project = {
 					enable = true,
-					limit = 8,
-					icon = "PROJECTS",
-					label = "",
+					limit = 10,
+					icon = "⛧ ",
+					label = "PROJECTS",
 					action = "Telescope find_files cwd=",
 				},
-				mru = { enable = true, limit = 10, icon = "LATESTS", label = "", cwd_only = false },
+				mru = {
+					enable = true,
+					limit = 10,
+					icon = "☢ ",
+					label = "LATESTS",
+					cwd_only = false,
+				},
 				footer = { "aatbip 2025" },
 			},
 		})
