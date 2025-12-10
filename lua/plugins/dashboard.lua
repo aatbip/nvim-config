@@ -25,7 +25,14 @@ return {
 			"  * ( ) _ + = 0 1 0 1 # @ $ % ^ & * ( ) _ + = [ ] { } ",
 			"                                                       ",
 		}
-		dashboard.section.header.val = banner
+
+		-- dashboard.section.header.val = banner
+		-- ======= Date & Time below banner =======
+		local function get_datetime()
+			return { "           " .. os.date("%A, %d %B %Y %H:%M:%S") }
+		end
+
+		dashboard.section.header.val = vim.list_extend(banner, get_datetime())
 
 		-- ======= Recent folders function (filtered) =======
 		local function recent_folders()
