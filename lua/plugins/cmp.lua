@@ -17,9 +17,18 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
+		local context = require("cmp.config.context")
 		require("luasnip.loaders.from_vscode").lazy_load() -- loads friendly-snippets
 
 		cmp.setup({
+			enabled = function()
+				-- disable in comments
+				if context.in_treesitter_capture("comment") or context.in_syntax_group("Comment") then
+					return false
+				end
+				return true
+			end,
+
 			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
@@ -67,6 +76,11 @@ return {
 					return vim_item
 				end,
 			},
+		})
+
+		-- Disable cmp for git commit and rebase messages
+		cmp.setup.filetype({ "gitcommit", "gitrebase" }, {
+			enabled = false,
 		})
 
 		-- Use buffer source for `/` and `?` (search)
