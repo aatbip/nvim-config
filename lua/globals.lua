@@ -2,6 +2,7 @@
 vim.g.mapleader = " " -- change the global Leader to space bar
 vim.o.timeoutlen = 300
 vim.o.number = true
+vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.expandtab = true -- Tab key 2 spaces (never real tabs)
