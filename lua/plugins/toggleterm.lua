@@ -3,16 +3,16 @@ return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
 	keys = {
-		{ "<leader>\\", mode = { "n", "t" }, desc = "Toggle main terminal" },
-		{ "<leader>l\\", desc = "Toggle vertical main terminal" },
-		{ "t1", desc = "Terminal 1" },
-		{ "t2", desc = "Terminal 2" },
-		{ "t3", desc = "Terminal 3" },
-		{ "t4", desc = "Terminal 4" },
-		{ "tl1", desc = "Vertical Terminal 1" },
-		{ "tl2", desc = "Vertical Terminal 2" },
-		{ "tl3", desc = "Vertical Terminal 3" },
-		{ "tl4", desc = "Vertical Terminal 4" },
+		{ "<leader>\\", desc = "Toggle vertical main terminal" },
+		{ "<leader>l\\", mode = { "n", "t" }, desc = "Toggle main terminal" },
+		{ "t1", desc = "Vertical Terminal 1" },
+		{ "t2", desc = "Vertical Terminal 2" },
+		{ "t3", desc = "Vertical Terminal 3" },
+		{ "t4", desc = "Vertical Terminal 4" },
+		{ "tl1", desc = "Terminal 1" },
+		{ "tl2", desc = "Terminal 2" },
+		{ "tl3", desc = "Terminal 3" },
+		{ "tl4", desc = "Terminal 4" },
 	},
 	opts = {
 		size = 16,
@@ -64,26 +64,26 @@ return {
 		end
 
 		-- Smart <leader>\ toggle (horizontal main)
-		vim.keymap.set("n", "<leader>\\", function()
+		vim.keymap.set("n", "<leader>l\\", function()
 			smart_toggle(1, 16, "horizontal")
 		end, { desc = "Toggle main terminal" })
 
 		-- Vertical main terminal: <leader>l\
 		local vertical_width = 80
-		vim.keymap.set("n", "<leader>l\\", function()
+		vim.keymap.set("n", "<leader>\\", function()
 			smart_toggle(1, vertical_width, "vertical")
 		end, { desc = "Toggle vertical main terminal" })
 
 		-- Horizontal numbered terminals: t1, t2, t3, t4
 		for i = 1, 4 do
-			vim.keymap.set("n", "t" .. i, function()
+			vim.keymap.set("n", "tl" .. i, function()
 				smart_toggle(i, 16, "horizontal")
 			end, { desc = "Terminal " .. i })
 		end
 
 		-- Vertical numbered terminals: tl1, tl2, tl3, tl4
 		for i = 1, 4 do
-			vim.keymap.set("n", "tl" .. i, function()
+			vim.keymap.set("n", "t" .. i, function()
 				smart_toggle(i, vertical_width, "vertical")
 			end, { desc = "Vertical Terminal " .. i })
 		end
