@@ -102,21 +102,21 @@ return {
 		shell = vim.o.shell,
 		float_opts = { border = "double" },
 		shade_terminals = false,
-		highlights = {
-			-- Main terminal background + foreground
-			Normal = {
-				guibg = "#1a1a1a",
-			},
-			NormalFloat = {
-				guibg = "#1a1a1a",
-			},
-			FloatBorder = {
-				guifg = "#89b4fa",
-				guibg = "#1e1e2e",
-			},
-			SignColumn = { guibg = "#1a1a1a" },
-			EndOfBuffer = { guifg = "#1a1a1a", guibg = "#1a1a1a" },
-		},
+		-- highlights = {
+		-- 	-- Main terminal background + foreground
+		-- 	Normal = {
+		-- 		guibg = "#1a1a1a",
+		-- 	},
+		-- 	NormalFloat = {
+		-- 		guibg = "#1a1a1a",
+		-- 	},
+		-- 	FloatBorder = {
+		-- 		guifg = "#89b4fa",
+		-- 		guibg = "#1e1e2e",
+		-- 	},
+		-- 	SignColumn = { guibg = "#1a1a1a" },
+		-- 	EndOfBuffer = { guifg = "#1a1a1a", guibg = "#1a1a1a" },
+		-- },
 		-- Show T1, T2, T3, T4 instead of ugly path
 		on_create = function(term)
 			local id = term.id
