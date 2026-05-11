@@ -35,3 +35,5 @@ vim.diagnostic.config({
 })
 
 vim.opt.cursorline = true -- highlights the current line
+vim.api.nvim_set_hl(0, "@lsp.type.comment.c", {}) -- removes highlight in macro conditions
+vim.api.nvim_set_hl(0, "@lsp.type.comment.cpp", {})
