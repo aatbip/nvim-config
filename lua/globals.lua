@@ -37,3 +37,12 @@ vim.diagnostic.config({
 vim.opt.cursorline = true -- highlights the current line
 vim.api.nvim_set_hl(0, "@lsp.type.comment.c", {}) -- removes highlight in macro conditions
 vim.api.nvim_set_hl(0, "@lsp.type.comment.cpp", {})
+
+--Commands to disable and enable auto formatting
+vim.api.nvim_create_user_command("DisableFmt", function()
+	vim.b.disable_autoformat = true
+end, {})
+
+vim.api.nvim_create_user_command("EnableFmt", function()
+	vim.b.disable_autoformat = false
+end, {})
