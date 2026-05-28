@@ -41,3 +41,7 @@ vim.keymap.set("n", "<leader>tt", function()
 	-- Switch focus
 	vim.api.nvim_set_current_win(next_win)
 end, { desc = "Toggle focus between splits" })
+
+-- Disable yank on delete
+vim.keymap.set("n", "d", '"_d', { noremap = true })
+vim.keymap.set("v", "d", '"_d', { noremap = true })
