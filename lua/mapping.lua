@@ -43,5 +43,5 @@ vim.keymap.set("n", "<leader>tt", function()
 end, { desc = "Toggle focus between splits" })
 
 -- Delete without yanking (preserves clipboard)
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { noremap = true, desc = "Delete without yank" })
-vim.keymap.set("n", "<leader>D", '"_D', { noremap = true, desc = "Delete to EOL without yank" })
+vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { noremap = true, desc = "Delete without yank" })
+vim.keymap.set("n", "<leader>X", '"_D', { noremap = true, desc = "Delete to EOL without yank" })
