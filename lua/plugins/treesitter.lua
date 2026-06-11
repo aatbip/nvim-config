@@ -19,6 +19,7 @@ return {
 
 			indent = {
 				enable = true, -- Treesitter-based auto-indent
+				disable = { "c", "cpp" },
 			},
 
 			incremental_selection = {
