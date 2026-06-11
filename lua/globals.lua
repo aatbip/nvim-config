@@ -46,3 +46,9 @@ end, {})
 vim.api.nvim_create_user_command("EnableFmt", function()
 	vim.b.disable_autoformat = false
 end, {})
+
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function()
+		pcall(vim.treesitter.start)
+	end,
+})
