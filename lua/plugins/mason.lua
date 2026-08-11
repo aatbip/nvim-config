@@ -16,10 +16,10 @@ return {
 		})
 
 		-- It auto-loads the plugins such as clangd
-		vim.lsp.enable("clangd")
-		vim.lsp.enable("lua_ls")
-		vim.lsp.enable("pyright")
-		vim.lsp.enable("eslint")
+		-- vim.lsp.enable("clangd")
+		-- vim.lsp.enable("lua_ls")
+		-- vim.lsp.enable("pyright")
+		-- vim.lsp.enable("eslint")
 
 		-- Optional: capabilities for cmp (applied globally via vim.lsp.config if needed)
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
