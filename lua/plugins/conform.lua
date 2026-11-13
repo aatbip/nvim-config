@@ -16,6 +16,7 @@ return {
 			cpp = { "clang_format" },
 			lua = { "stylua" },
 			python = { "black" },
+			rust = { "rustfmt", lsp_format = "fallback" },
 		},
 	},
 	config = function(_, opts)

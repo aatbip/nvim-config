@@ -1,7 +1,7 @@
 -- file explorer
 return {
 	"nvim-tree/nvim-tree.lua",
-	version = "*",
+	version = "~1.18",
 	lazy = false,
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
